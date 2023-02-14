@@ -1,0 +1,528 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 15px;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.container {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* page*/
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  background: url(../img/header/bg.jpg) center no-repeat;
+  background-size: cover;
+}
+
+/* header */
+.header {
+  margin-bottom: 100px;
+  padding: 1rem;
+  background: #2b7ded;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.header-brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .header-brand {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    display: none;
+  }
+}
+.header-logo img {
+  display: block;
+}
+
+.header-nav {
+  display: block;
+}
+@media (max-width: 768px) {
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+.header-nav__link {
+  position: relative;
+  margin-left: 1.5rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.header-nav__link::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+@media (max-width: 768px) {
+  .header-nav__link {
+    margin-left: 0;
+  }
+}
+.header-nav__link:hover {
+  color: #9fbeeb;
+  transition: color 0.3s linear;
+}
+.header-nav__link.active::after, .header-nav__link:hover::after {
+  opacity: 1;
+}
+
+/* CONTENT */
+.content {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.content.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.content.about .text,
+.content.about .content-header {
+  margin-bottom: 0;
+}
+
+.content-header {
+  margin-bottom: 35px;
+  max-width: 565px;
+}
+
+.subtitle {
+  margin-bottom: -20px;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+}
+
+.title {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.title span {
+  color: #2b7ded;
+}
+
+.text {
+  margin-bottom: 50px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+  max-width: 565px;
+}
+
+.text p {
+  margin: 0px 0 35px;
+}
+
+.text.cont {
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 35px;
+  line-height: 1.5;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #2B7DED;
+  border-radius: 5px;
+  transition: background 0.2s linear;
+}
+.btn:hover {
+  background-color: #255aa5;
+}
+
+.btn-full {
+  display: block;
+  width: 113%;
+}
+
+/*PROGRESS */
+.aside {
+  top: 110px;
+  right: 350px;
+  width: 390px;
+  text-align: left;
+}
+
+.progress {
+  position: relative;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+.progress:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.progress-text {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.percent {
+  position: absolute;
+  left: 20px;
+  bottom: 2px;
+  font-size: 0.9rem;
+  margin: 1px auto;
+}
+
+.progress-bar {
+  height: 18px;
+  background-color: #ee303c;
+  border-radius: 4px;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-striped .progress-bar.html {
+  -webkit-animation: progressHTML 6s;
+          animation: progressHTML 6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: rgb(231, 40, 40) 25%;
+  background-image: linear-gradient(45deg, rgb(231, 40, 40) 25%, transparent 25%, transparent 50%, rgb(231, 40, 40) 25% rgb(231, 40, 40) 25% transparent 75%, transparent);
+}
+.progress-striped .progress-bar.css {
+  -webkit-animation: progressCSS 6s;
+          animation: progressCSS 6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #3186d4;
+  background-image: linear-gradient(45deg, #3186d4, transparent 25%, transparent 50%, #3186d4, #3186d4, transparent 75%, transparent);
+}
+.progress-striped .progress-bar.javascript {
+  -webkit-animation: progressJavascript 6s;
+          animation: progressJavascript 6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #e6e22b;
+  background-image: linear-gradient(45deg, #e6e22b, transparent 25%, transparent 50%, #e6e22b, #e6e22b, transparent 75%, transparent);
+}
+
+@-webkit-keyframes progressHTML {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes progressHTML {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+@-webkit-keyframes progressCSS {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes progressCSS {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+@-webkit-keyframes progressJavascript {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10%;
+  }
+}
+@keyframes progressJavascript {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10%;
+  }
+}
+.footer {
+  width: 100%;
+  bottom: 45px;
+  left: 0;
+}
+
+.contacts {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contacts-link {
+  margin-right: 2rem;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.contacts-link:last-child {
+  margin-right: 0;
+}
+.contacts-link:last-child:hover {
+  text-decoration: underline;
+}
+
+.contacts-icon {
+  margin-right: 5px;
+}
+
+.form {
+  width: 100%;
+  max-width: 280px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 5px;
+}
+.input::-moz-placeholder {
+  color: #fff;
+}
+.input:-ms-input-placeholder {
+  color: #fff;
+}
+.input::placeholder {
+  color: #fff;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 5px;
+}
+.textarea::-moz-placeholder {
+  color: #fff;
+}
+.textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.textarea::placeholder {
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
